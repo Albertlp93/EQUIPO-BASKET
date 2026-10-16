@@ -1,0 +1,31 @@
+<div class="container py-4">
+  <h1 class="mb-4 text-center">🏀 {{ title }}</h1>
+
+  <div class="row">
+    <!-- Columna lista -->
+    <div class="col-md-6">
+      <app-players 
+        [selectedPlayer]="jugadorSeleccionado" 
+        (playerSelected)="onPlayerSelected($event)">
+      </app-players>
+    </div>
+
+    <!-- Columna vista previa -->
+    <div class="col-md-6">
+      <div *ngIf="!jugadorSeleccionado" class="alert alert-secondary text-center">
+        Haz clic en un jugador de la izquierda para ver su detalle y vídeo.
+      </div>
+
+      <div *ngIf="jugadorSeleccionado">
+        <app-detail 
+          [player]="jugadorSeleccionado" 
+          (closeDetail)="jugadorSeleccionado = null">
+        </app-detail>
+
+        <app-media 
+          [videoUrl]="jugadorSeleccionado.videoUrl">
+        </app-media>
+      </div>
+    </div>
+  </div>
+</div>
