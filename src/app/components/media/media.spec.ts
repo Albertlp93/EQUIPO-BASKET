@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MediaComponent } from './media';
 
 describe('MediaComponent', () => {
-  let component: MediaComponent;
   let fixture: ComponentFixture<MediaComponent>;
 
   beforeEach(async () => {
@@ -11,7 +10,6 @@ describe('MediaComponent', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(MediaComponent);
-    component = fixture.componentInstance;
     fixture.componentRef.setInput('videoUrl', 'assets/videos/prueba.mp4');
     await fixture.whenStable();
   });

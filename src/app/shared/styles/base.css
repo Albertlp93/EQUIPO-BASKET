@@ -1,0 +1,38 @@
+/* Estilos base de la página: fondo, texto y títulos */
+body {
+  background-color: var(--eb-fondo-pagina);
+  color: var(--eb-texto);
+  font-family: var(--eb-fuente-texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+.eb-titulo-seccion {
+  font-family: var(--eb-fuente-titulo);
+  letter-spacing: 0.03em;
+}
+
+/* Título de sección: JUGADORES, DETALLE DEL JUGADOR... */
+.eb-titulo-seccion {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: var(--eb-texto);
+  margin-bottom: 1rem;
+}
+
+.eb-titulo-seccion--acento {
+  color: var(--eb-naranja);
+  font-size: 0.85rem;
+}
+
+.text-suave {
+  color: var(--eb-texto-suave);
+}
+
+.text-acento {
+  color: var(--eb-naranja);
+}

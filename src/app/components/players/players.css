@@ -1,41 +1,28 @@
 .eb-jugador {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 0.6rem 0.75rem;
-  border: 2px solid transparent;
-  border-radius: var(--eb-radio);
-  background: var(--eb-fondo);
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  color: var(--eb-texto);
   transition:
     border-color 0.15s,
-    background-color 0.15s,
-    transform 0.15s;
+    background-color 0.15s;
 }
 
 .eb-jugador:hover {
-  border-color: rgba(242, 107, 29, 0.4);
-  transform: translateX(3px);
+  border-color: var(--eb-borde-fuerte);
+  background: var(--eb-fondo-elevado);
 }
 
 /* Estado seleccionado */
-.eb-jugador--activo {
+.eb-jugador--activo,
+.eb-jugador--activo:hover {
   border-color: var(--eb-naranja);
-  background: rgba(242, 107, 29, 0.1);
+  background: var(--eb-naranja-fondo);
 }
 
-.eb-jugador__foto {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.eb-jugador__dorsal {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.4rem;
+.eb-jugador__marca {
+  font-size: 0.75rem;
+  font-weight: 700;
   color: var(--eb-naranja);
-}
-
-.eb-jugador--activo .eb-jugador__dorsal {
-  color: var(--eb-naranja-oscuro);
 }

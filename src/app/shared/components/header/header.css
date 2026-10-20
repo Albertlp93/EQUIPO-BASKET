@@ -1,0 +1,20 @@
+.eb-header {
+  background: var(--eb-fondo-header);
+  border-bottom: 1px solid var(--eb-borde);
+}
+
+.eb-header__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--eb-naranja);
+  font-size: 1.4rem;
+}
+
+.eb-header__titulo {
+  font-size: 1.45rem;
+  color: var(--eb-texto);
+}

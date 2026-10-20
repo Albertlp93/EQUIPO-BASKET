@@ -4,12 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { Player, Posicion } from '../../shared/models/player.model';
 import { PLAYERS_DATA, POSICIONES } from '../../data/players.mock';
 import { PlayerFilterPipe } from '../../shared/pipes/player-filter.pipe';
+import { AvatarComponent } from '../../shared/components/avatar/avatar';
 
 /** Listado de jugadores con buscador y filtro por posición. */
 @Component({
   selector: 'app-players',
   standalone: true,
-  imports: [CommonModule, FormsModule, PlayerFilterPipe],
+  imports: [CommonModule, FormsModule, PlayerFilterPipe, AvatarComponent],
   templateUrl: './players.html',
   styleUrl: './players.css',
 })

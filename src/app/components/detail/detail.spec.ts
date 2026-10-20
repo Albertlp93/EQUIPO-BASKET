@@ -26,7 +26,7 @@ describe('DetailComponent', () => {
   it('emite closeDetail al pulsar cerrar', () => {
     let cerrado = false;
     component.closeDetail.subscribe(() => (cerrado = true));
-    (fixture.nativeElement as HTMLElement).querySelector<HTMLButtonElement>('.btn-close')?.click();
+    (fixture.nativeElement as HTMLElement).querySelector<HTMLButtonElement>('.eb-btn--borde')?.click();
     expect(cerrado).toBe(true);
   });
 });

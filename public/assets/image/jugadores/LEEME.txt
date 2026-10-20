@@ -1,0 +1,13 @@
+Fotos de los jugadores (JPG, cuadradas, unos 400x400 px).
+El nombre del archivo debe coincidir con el campo fotoUrl de src/app/data/players.mock.ts:
+
+curry.jpg
+gilgeous-alexander.jpg
+james.jpg
+antetokounmpo.jpg
+jokic.jpg
+doncic.jpg
+durant.jpg
+wembanyama.jpg
+
+Si falta una foto, la aplicacion muestra las iniciales del jugador.

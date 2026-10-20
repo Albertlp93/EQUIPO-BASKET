@@ -1,0 +1,6 @@
+.eb-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--eb-borde);
+  color: var(--eb-texto-suave);
+  font-size: 0.8rem;
+}

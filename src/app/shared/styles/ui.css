@@ -1,0 +1,114 @@
+/* Piezas visuales reutilizables: tarjetas, insignias, botones y formularios */
+
+/* Tarjeta / panel */
+.eb-tarjeta {
+  background: var(--eb-fondo-tarjeta);
+  border: 1px solid var(--eb-borde);
+  border-radius: var(--eb-radio-grande);
+}
+
+/* Botones */
+.eb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid transparent;
+  border-radius: var(--eb-radio);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--eb-texto);
+  background: var(--eb-fondo-elevado);
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    opacity 0.15s;
+}
+
+.eb-btn:hover:not(:disabled) {
+  background: var(--eb-borde-fuerte);
+}
+
+.eb-btn:disabled {
+  background: transparent;
+  color: var(--eb-texto-suave);
+  opacity: 0.6;
+}
+
+.eb-btn--primario {
+  background: var(--eb-naranja);
+  color: #fff;
+}
+
+.eb-btn--primario:hover:not(:disabled) {
+  background: var(--eb-naranja-oscuro);
+}
+
+.eb-btn--borde {
+  background: transparent;
+  border-color: var(--eb-borde-fuerte);
+  color: var(--eb-texto-suave);
+}
+
+.eb-btn--borde:hover:not(:disabled) {
+  background: var(--eb-fondo-elevado);
+  color: var(--eb-texto);
+}
+
+/* Campos de formulario (Bootstrap en modo oscuro) */
+.form-control,
+.form-select {
+  background-color: var(--eb-fondo-tarjeta);
+  border-color: var(--eb-borde-fuerte);
+  color: var(--eb-texto);
+  font-size: 0.85rem;
+}
+
+.form-control::placeholder {
+  color: var(--eb-texto-suave);
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--eb-fondo-tarjeta);
+  color: var(--eb-texto);
+  border-color: var(--eb-naranja);
+  box-shadow: 0 0 0 0.15rem rgba(255, 122, 0, 0.25);
+}
+
+.form-select option {
+  background: var(--eb-fondo-tarjeta);
+  color: var(--eb-texto);
+}
+
+/* Barras deslizantes (progreso y volumen) */
+.eb-rango {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--eb-borde-fuerte);
+  accent-color: var(--eb-texto);
+  cursor: pointer;
+}
+
+.eb-rango::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--eb-texto);
+}
+
+.eb-rango::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--eb-texto);
+}
+
+.eb-rango:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

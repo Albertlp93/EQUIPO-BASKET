@@ -1,0 +1,38 @@
+/* Paleta, tipografía y medidas comunes de EQUIPO BASKET */
+:root {
+  /* Fondos (de más oscuro a más claro) */
+  --eb-fondo-pagina: #070b12;
+  --eb-fondo-header: #0d131c;
+  --eb-fondo-tarjeta: #0f1620;
+  --eb-fondo-elevado: #162130;
+
+  /* Bordes */
+  --eb-borde: #1f2a38;
+  --eb-borde-fuerte: #2b394b;
+
+  /* Texto */
+  --eb-texto: #e8edf3;
+  --eb-texto-suave: #8d99a8;
+
+  /* Acento */
+  --eb-naranja: #ff7a00;
+  --eb-naranja-oscuro: #e06a00;
+  --eb-naranja-fondo: rgba(255, 122, 0, 0.12);
+
+  /* Tipografías */
+  --eb-fuente-titulo: 'Archivo Black', 'Arial Black', sans-serif;
+  --eb-fuente-texto: 'Inter', system-ui, sans-serif;
+
+  /* Formas */
+  --eb-radio: 0.6rem;
+  --eb-radio-grande: 0.9rem;
+
+  /* Bootstrap hereda la paleta */
+  --bs-body-bg: var(--eb-fondo-pagina);
+  --bs-body-color: var(--eb-texto);
+  --bs-body-font-family: var(--eb-fuente-texto);
+  --bs-border-color: var(--eb-borde);
+  --bs-secondary-color: var(--eb-texto-suave);
+  --bs-primary: var(--eb-naranja);
+  --bs-primary-rgb: 255, 122, 0;
+}

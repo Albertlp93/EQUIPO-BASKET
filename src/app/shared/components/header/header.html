@@ -1,11 +1,9 @@
 <header class="eb-header">
   <div class="container d-flex align-items-center gap-3 py-3">
-    <span class="eb-header__logo" aria-hidden="true">
-      <i class="bi bi-dribbble"></i>
-    </span>
+    <span class="eb-header__logo" aria-hidden="true">🏀</span>
     <div>
       <h1 class="eb-header__titulo m-0">{{ teamName }}</h1>
-      <small class="eb-header__subtitulo">Plantilla oficial</small>
+      <small *ngIf="subtitle" class="text-suave">{{ subtitle }}</small>
     </div>
   </div>
 </header>

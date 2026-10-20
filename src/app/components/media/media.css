@@ -2,30 +2,26 @@
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
+  border-radius: var(--eb-radio);
   background: #000;
   cursor: pointer;
 }
 
 .eb-tiempo {
-  min-width: 2.75rem;
+  min-width: 2.5rem;
+  font-size: 0.75rem;
   font-variant-numeric: tabular-nums;
-  font-size: 0.85rem;
-  color: var(--eb-gris);
+  color: var(--eb-texto-suave);
   text-align: center;
 }
 
-.eb-volumen .form-range {
-  width: 7rem;
+.eb-mute {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--eb-texto);
 }
 
-.form-range {
-  accent-color: var(--eb-naranja);
-}
-
-.form-range::-webkit-slider-thumb {
-  background: var(--eb-naranja);
-}
-
-.form-range::-moz-range-thumb {
-  background: var(--eb-naranja);
+.eb-volumen {
+  width: 6rem;
 }

@@ -19,7 +19,6 @@ import { DurationPipe } from '../../shared/pipes/duration.pipe';
 })
 export class MediaComponent implements OnChanges {
   @Input() videoUrl = '';
-  @Input() titulo = '';
 
   @ViewChild('video') videoRef?: ElementRef<HTMLVideoElement>;
 

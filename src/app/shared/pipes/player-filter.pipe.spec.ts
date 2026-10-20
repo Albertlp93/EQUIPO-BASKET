@@ -9,8 +9,8 @@ describe('PlayerFilterPipe', () => {
   });
 
   it('filtra por texto sin tildes ni mayúsculas', () => {
-    const res = pipe.transform(PLAYERS_DATA, 'FERNANDEZ');
-    expect(res.map((p) => p.apellidos)).toEqual(['Fernández']);
+    const res = pipe.transform(PLAYERS_DATA, 'JOKIC');
+    expect(res.map((p) => p.apellidos)).toEqual(['Jokić']);
   });
 
   it('filtra por posición', () => {
@@ -19,6 +19,7 @@ describe('PlayerFilterPipe', () => {
   });
 
   it('combina texto y posición', () => {
-    expect(pipe.transform(PLAYERS_DATA, 'gasol', 'Ala-Pívot').length).toBe(1);
+    expect(pipe.transform(PLAYERS_DATA, 'nikola', 'Pívot').length).toBe(1);
+    expect(pipe.transform(PLAYERS_DATA, 'nikola', 'Base').length).toBe(0);
   });
 });
