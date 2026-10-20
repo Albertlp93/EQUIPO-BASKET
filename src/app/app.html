@@ -1,31 +1,31 @@
-<div class="container py-4">
-  <h1 class="mb-4 text-center">🏀 {{ title }}</h1>
+<app-header [teamName]="teamName"></app-header>
 
-  <div class="row">
-    <!-- Columna lista -->
-    <div class="col-md-6">
-      <app-players 
-        [selectedPlayer]="jugadorSeleccionado" 
-        (playerSelected)="onPlayerSelected($event)">
-      </app-players>
+<main class="container py-4">
+  <div class="row g-4">
+    <!-- Listado -->
+    <div class="col-lg-5">
+      <app-players
+        [selectedPlayer]="jugadorSeleccionado"
+        (playerSelected)="onPlayerSelected($event)"
+      ></app-players>
     </div>
 
-    <!-- Columna vista previa -->
-    <div class="col-md-6">
-      <div *ngIf="!jugadorSeleccionado" class="alert alert-secondary text-center">
-        Haz clic en un jugador de la izquierda para ver su detalle y vídeo.
+    <!-- Detalle y reproductor -->
+    <div class="col-lg-7">
+      <div *ngIf="jugadorSeleccionado; else sinSeleccion" class="d-grid gap-4">
+        <app-detail [player]="jugadorSeleccionado" (closeDetail)="onCloseDetail()"></app-detail>
+        <app-media
+          [videoUrl]="jugadorSeleccionado.videoUrl"
+          [titulo]="jugadorSeleccionado.nombre + ' ' + jugadorSeleccionado.apellidos"
+        ></app-media>
       </div>
 
-      <div *ngIf="jugadorSeleccionado">
-        <app-detail 
-          [player]="jugadorSeleccionado" 
-          (closeDetail)="jugadorSeleccionado = null">
-        </app-detail>
-
-        <app-media 
-          [videoUrl]="jugadorSeleccionado.videoUrl">
-        </app-media>
-      </div>
+      <ng-template #sinSeleccion>
+        <div class="eb-panel eb-vacio text-center text-secondary p-5">
+          <i class="bi bi-person-badge d-block mb-2"></i>
+          Selecciona un jugador del listado para ver su ficha y su vídeo.
+        </div>
+      </ng-template>
     </div>
   </div>
-</div>
+</main>

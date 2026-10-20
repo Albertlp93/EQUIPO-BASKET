@@ -1,22 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MediaComponent } from './media';
 
-import { Media } from './media';
-
-describe('Media', () => {
-  let component: Media;
-  let fixture: ComponentFixture<Media>;
+describe('MediaComponent', () => {
+  let component: MediaComponent;
+  let fixture: ComponentFixture<MediaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Media],
+      imports: [MediaComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Media);
+    fixture = TestBed.createComponent(MediaComponent);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('videoUrl', 'assets/videos/prueba.mp4');
     await fixture.whenStable();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('renderiza el vídeo y los controles', () => {
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('video')).toBeTruthy();
+    expect(el.querySelectorAll('input[type="range"]').length).toBe(2);
   });
 });

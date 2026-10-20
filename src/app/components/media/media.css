@@ -1,0 +1,31 @@
+.eb-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  cursor: pointer;
+}
+
+.eb-tiempo {
+  min-width: 2.75rem;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  color: var(--eb-gris);
+  text-align: center;
+}
+
+.eb-volumen .form-range {
+  width: 7rem;
+}
+
+.form-range {
+  accent-color: var(--eb-naranja);
+}
+
+.form-range::-webkit-slider-thumb {
+  background: var(--eb-naranja);
+}
+
+.form-range::-moz-range-thumb {
+  background: var(--eb-naranja);
+}

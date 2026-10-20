@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos globales y paleta de EQUIPO BASKET */
+:root {
+  --eb-naranja: #f26b1d;
+  --eb-naranja-oscuro: #c9530f;
+  --eb-oscuro: #1b1f2a;
+  --eb-gris: #6c757d;
+  --eb-fondo: #f4f5f7;
+  --eb-blanco: #ffffff;
+  --eb-radio: 0.75rem;
+  --eb-sombra: 0 4px 14px rgba(27, 31, 42, 0.08);
+
+  /* Bootstrap usa el naranja del equipo como color principal */
+  --bs-primary: var(--eb-naranja);
+  --bs-primary-rgb: 242, 107, 29;
+  --bs-body-font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--eb-fondo);
+  color: var(--eb-oscuro);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.eb-titulo {
+  font-family: 'Oswald', 'Inter', sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.eb-panel {
+  background: var(--eb-blanco);
+  border-radius: var(--eb-radio);
+  box-shadow: var(--eb-sombra);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--eb-naranja);
+  --bs-btn-border-color: var(--eb-naranja);
+  --bs-btn-hover-bg: var(--eb-naranja-oscuro);
+  --bs-btn-hover-border-color: var(--eb-naranja-oscuro);
+  --bs-btn-active-bg: var(--eb-naranja-oscuro);
+  --bs-btn-active-border-color: var(--eb-naranja-oscuro);
+  --bs-btn-disabled-bg: var(--eb-naranja);
+  --bs-btn-disabled-border-color: var(--eb-naranja);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--eb-naranja);
+  --bs-btn-border-color: var(--eb-naranja);
+  --bs-btn-hover-bg: var(--eb-naranja);
+  --bs-btn-hover-border-color: var(--eb-naranja);
+  --bs-btn-active-bg: var(--eb-naranja-oscuro);
+  --bs-btn-active-border-color: var(--eb-naranja-oscuro);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--eb-naranja);
+  box-shadow: 0 0 0 0.2rem rgba(242, 107, 29, 0.25);
+}

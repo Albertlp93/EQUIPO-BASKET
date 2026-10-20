@@ -1,1 +1,74 @@
-<p>media works!</p>
+<section *ngIf="videoUrl" class="eb-panel overflow-hidden">
+  <h2 class="h6 m-0 px-3 pt-3 pb-2">
+    <i class="bi bi-play-btn-fill text-primary"></i> Vídeo{{ titulo ? ': ' + titulo : '' }}
+  </h2>
+
+  <video
+    #video
+    class="eb-video"
+    [src]="videoUrl"
+    preload="metadata"
+    playsinline
+    (click)="togglePlay()"
+    (loadedmetadata)="onLoadedMetadata()"
+    (timeupdate)="onTimeUpdate()"
+    (play)="onPlay()"
+    (pause)="onPause()"
+    (ended)="onPause()"
+  ></video>
+
+  <div class="p-3">
+    <!-- Barra de progreso -->
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <span class="eb-tiempo">{{ tiempoActual | duration }}</span>
+      <input
+        type="range"
+        class="form-range flex-grow-1"
+        aria-label="Progreso del vídeo"
+        min="0"
+        step="0.1"
+        [max]="duracion"
+        [value]="tiempoActual"
+        [disabled]="!duracion"
+        (input)="seek($event)"
+      />
+      <span class="eb-tiempo">{{ duracion | duration }}</span>
+    </div>
+
+    <!-- Botones y volumen -->
+    <div class="d-flex flex-wrap align-items-center gap-2">
+      <div class="btn-group" role="group" aria-label="Controles de reproducción">
+        <button type="button" class="btn btn-primary" (click)="play()" [disabled]="reproduciendo" aria-label="Reproducir">
+          <i class="bi bi-play-fill"></i>
+        </button>
+        <button type="button" class="btn btn-primary" (click)="pause()" [disabled]="!reproduciendo" aria-label="Pausar">
+          <i class="bi bi-pause-fill"></i>
+        </button>
+        <button type="button" class="btn btn-primary" (click)="stop()" aria-label="Detener">
+          <i class="bi bi-stop-fill"></i>
+        </button>
+      </div>
+
+      <div class="d-flex align-items-center gap-2 ms-auto eb-volumen">
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-sm"
+          (click)="toggleMute()"
+          [attr.aria-label]="silenciado ? 'Activar sonido' : 'Silenciar'"
+        >
+          <i class="bi" [ngClass]="silenciado || volumen === 0 ? 'bi-volume-mute-fill' : 'bi-volume-up-fill'"></i>
+        </button>
+        <input
+          type="range"
+          class="form-range"
+          aria-label="Volumen"
+          min="0"
+          max="1"
+          step="0.05"
+          [value]="silenciado ? 0 : volumen"
+          (input)="cambiarVolumen($event)"
+        />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,58 @@
-<p>players works!</p>
+<section class="eb-panel p-3">
+  <h2 class="h5 mb-3">Jugadores</h2>
+
+  <!-- Filtros: texto + desplegable (parámetros del pipe playerFilter) -->
+  <div class="row g-2 mb-3">
+    <div class="col-sm-6">
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Buscar jugador"
+          aria-label="Buscar jugador por nombre"
+          [(ngModel)]="texto"
+        />
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <select class="form-select" aria-label="Filtrar por posición" [(ngModel)]="posicion">
+        <option value="">Todas las posiciones</option>
+        <option *ngFor="let pos of posiciones" [value]="pos">{{ pos }}</option>
+      </select>
+    </div>
+  </div>
+
+  <ng-container *ngIf="players | playerFilter: texto : posicion as filtrados">
+    <ul class="list-unstyled m-0 d-grid gap-2" *ngIf="filtrados.length; else sinResultados">
+      <li *ngFor="let player of filtrados; trackBy: trackById">
+        <button
+          type="button"
+          class="eb-jugador w-100 text-start"
+          [class.eb-jugador--activo]="player.id === selectedPlayer?.id"
+          [attr.aria-pressed]="player.id === selectedPlayer?.id"
+          (click)="onSelectPlayer(player)"
+        >
+          <img class="eb-jugador__foto" [src]="player.fotoUrl" [alt]="player.nombre" />
+          <span class="flex-grow-1">
+            <span class="d-block fw-semibold">{{ player.nombre }} {{ player.apellidos }}</span>
+            <span class="d-block small text-secondary">
+              {{ player.posicion }} · {{ player.edad }} años · {{ player.altura }} cm
+            </span>
+          </span>
+          <span class="eb-jugador__dorsal">#{{ player.dorsal }}</span>
+        </button>
+      </li>
+    </ul>
+
+    <ng-template #sinResultados>
+      <div class="text-center text-secondary py-4">
+        <i class="bi bi-emoji-frown d-block fs-3 mb-2"></i>
+        No hay jugadores que coincidan con el filtro.
+        <button type="button" class="btn btn-link p-0 d-block mx-auto" (click)="limpiarFiltros()">
+          Limpiar filtros
+        </button>
+      </div>
+    </ng-template>
+  </ng-container>
+</section>

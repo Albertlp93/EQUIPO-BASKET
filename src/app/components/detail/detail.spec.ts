@@ -1,22 +1,32 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DetailComponent } from './detail';
+import { PLAYERS_DATA } from '../../data/players.mock';
 
-import { Detail } from './detail';
-
-describe('Detail', () => {
-  let component: Detail;
-  let fixture: ComponentFixture<Detail>;
+describe('DetailComponent', () => {
+  let component: DetailComponent;
+  let fixture: ComponentFixture<DetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Detail],
+      imports: [DetailComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Detail);
+    fixture = TestBed.createComponent(DetailComponent);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('player', PLAYERS_DATA[0]);
     await fixture.whenStable();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('muestra los datos del jugador', () => {
+    const texto = (fixture.nativeElement as HTMLElement).textContent ?? '';
+    expect(texto).toContain(PLAYERS_DATA[0].nombre);
+    expect(texto).toContain(PLAYERS_DATA[0].nacionalidad);
+  });
+
+  it('emite closeDetail al pulsar cerrar', () => {
+    let cerrado = false;
+    component.closeDetail.subscribe(() => (cerrado = true));
+    (fixture.nativeElement as HTMLElement).querySelector<HTMLButtonElement>('.btn-close')?.click();
+    expect(cerrado).toBe(true);
   });
 });

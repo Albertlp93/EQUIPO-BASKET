@@ -1,0 +1,24 @@
+.eb-header {
+  background: linear-gradient(120deg, var(--eb-oscuro) 60%, var(--eb-naranja) 140%);
+  color: var(--eb-blanco);
+  border-bottom: 4px solid var(--eb-naranja);
+}
+
+.eb-header__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--eb-naranja);
+  font-size: 1.75rem;
+}
+
+.eb-header__titulo {
+  font-size: 1.9rem;
+}
+
+.eb-header__subtitulo {
+  color: rgba(255, 255, 255, 0.7);
+}
