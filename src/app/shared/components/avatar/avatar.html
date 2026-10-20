@@ -1,10 +1,7 @@
-<span
-  class="eb-avatar"
-  [class.eb-avatar--lg]="size === 'lg'"
-  [class.eb-avatar--acento]="acento"
->
-  <img *ngIf="src && !imagenRota; else sinFoto" [src]="src" [alt]="alt" (error)="imagenRota = true" />
-  <ng-template #sinFoto>
+<span class="eb-avatar" [class.eb-avatar--lg]="size === 'lg'" [class.eb-avatar--acento]="acento">
+  @if (src && !imagenRota) {
+    <img [src]="src" [alt]="alt" (error)="imagenRota = true" />
+  } @else {
     <span aria-hidden="true">{{ iniciales }}</span>
-  </ng-template>
+  }
 </span>

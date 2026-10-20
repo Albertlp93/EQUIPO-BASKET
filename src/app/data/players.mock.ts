@@ -21,7 +21,8 @@ export const PLAYERS_DATA: Player[] = [
     nacionalidad: 'Estados Unidos',
     puntosPorPartido: 24.5,
     fotoUrl: 'assets/image/jugadores/curry.jpg',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+    videoUrl: '',
+    infoUrl: 'https://espndeportes.espn.com/basquetbol/nba/jugador/_/id/3975/stephen-curry',
     biografia:
       'Base de los Golden State Warriors y máximo triplista de la historia de la NBA. 4 anillos (2015, 2017, 2018, 2022) y 2 MVP de temporada regular (2015 y 2016).',
   },
@@ -37,7 +38,8 @@ export const PLAYERS_DATA: Player[] = [
     nacionalidad: 'Canadá',
     puntosPorPartido: 32.7,
     fotoUrl: 'assets/image/jugadores/gilgeous-alexander.jpg',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+    videoUrl: '',
+    infoUrl: 'https://espndeportes.espn.com/basquetbol/nba/jugador/_/id/4278073/shai-gilgeous-alexander',
     biografia:
       'Escolta de los Oklahoma City Thunder. MVP y campeón de la NBA en 2025, además de MVP de las Finales y máximo anotador de esa temporada.',
   },
@@ -53,7 +55,8 @@ export const PLAYERS_DATA: Player[] = [
     nacionalidad: 'Estados Unidos',
     puntosPorPartido: 24.4,
     fotoUrl: 'assets/image/jugadores/james.jpg',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+    videoUrl: '',
+    infoUrl: 'https://espndeportes.espn.com/basquetbol/nba/jugador/_/id/1966/lebron-james',
     biografia:
       'Alero de Los Angeles Lakers y máximo anotador de la historia de la NBA. 4 anillos, 4 MVP de temporada y 4 MVP de las Finales.',
   },
@@ -69,7 +72,8 @@ export const PLAYERS_DATA: Player[] = [
     nacionalidad: 'Grecia',
     puntosPorPartido: 30.4,
     fotoUrl: 'assets/image/jugadores/antetokounmpo.jpg',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
+    videoUrl: '',
+    infoUrl: 'https://espndeportes.espn.com/basquetbol/nba/jugador/_/id/3032977/giannis-antetokounmpo',
     biografia:
       'Ala-pívot de los Milwaukee Bucks, apodado «The Greek Freak». Campeón y MVP de las Finales en 2021 y 2 veces MVP de temporada (2019 y 2020).',
   },
@@ -85,7 +89,8 @@ export const PLAYERS_DATA: Player[] = [
     nacionalidad: 'Serbia',
     puntosPorPartido: 29.6,
     fotoUrl: 'assets/image/jugadores/jokic.jpg',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4',
+    videoUrl: '',
+    infoUrl: 'https://espndeportes.espn.com/basquetbol/nba/jugador/_/id/3112335/nikola-jokic',
     biografia:
       'Pívot de los Denver Nuggets y referente del juego interior pasador. Campeón y MVP de las Finales en 2023 y 3 veces MVP de temporada (2021, 2022 y 2024).',
   },
@@ -101,7 +106,8 @@ export const PLAYERS_DATA: Player[] = [
     nacionalidad: 'Eslovenia',
     puntosPorPartido: 28.2,
     fotoUrl: 'assets/image/jugadores/doncic.jpg',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4',
+    videoUrl: '',
+    infoUrl: 'https://espndeportes.espn.com/basquetbol/nba/jugador/_/id/3945274/luka-doncic',
     biografia:
       'Escolta de Los Angeles Lakers tras su traspaso desde Dallas en 2025. Generador ofensivo con 5 selecciones en el mejor quinteto de la NBA.',
   },
@@ -117,7 +123,8 @@ export const PLAYERS_DATA: Player[] = [
     nacionalidad: 'Estados Unidos',
     puntosPorPartido: 26.6,
     fotoUrl: 'assets/image/jugadores/durant.jpg',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4',
+    videoUrl: '',
+    infoUrl: 'https://espndeportes.espn.com/basquetbol/nba/jugador/_/id/3202/kevin-durant',
     biografia:
       'Alero de los Houston Rockets. 2 anillos y 2 MVP de las Finales (2017 y 2018), MVP de temporada en 2014 y 4 oros olímpicos con Estados Unidos.',
   },
@@ -133,7 +140,8 @@ export const PLAYERS_DATA: Player[] = [
     nacionalidad: 'Francia',
     puntosPorPartido: 24.3,
     fotoUrl: 'assets/image/jugadores/wembanyama.jpg',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4',
+    videoUrl: '',
+    infoUrl: 'https://espndeportes.espn.com/basquetbol/nba/jugador/_/id/5104157/victor-wembanyama',
     biografia:
       'Pívot de los San Antonio Spurs. Número 1 del draft de 2023 y Rookie del Año en 2024, combina altura de 2,24 m con manejo de balón y tiro exterior.',
   },

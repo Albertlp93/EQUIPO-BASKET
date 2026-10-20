@@ -18,6 +18,10 @@
   --eb-naranja: #ff7a00;
   --eb-naranja-oscuro: #e06a00;
   --eb-naranja-fondo: rgba(255, 122, 0, 0.12);
+  --eb-rojo: #e5383b;
+  --eb-rojo-oscuro: #c22b2e;
+  --eb-azul-electrico: #0066ff;
+  --eb-azul-electrico-oscuro: #0052cc;
 
   /* Tipografías */
   --eb-fuente-titulo: 'Archivo Black', 'Arial Black', sans-serif;

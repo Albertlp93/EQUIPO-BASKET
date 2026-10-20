@@ -15,17 +15,17 @@
     <div class="col-lg-6">
       <h2 class="eb-titulo-seccion">Detalle del jugador</h2>
 
-      <div *ngIf="jugadorSeleccionado; else sinSeleccion" class="d-grid gap-3">
-        <app-detail [player]="jugadorSeleccionado" (closeDetail)="onCloseDetail()"></app-detail>
-        <app-media [videoUrl]="jugadorSeleccionado.videoUrl"></app-media>
-      </div>
-
-      <ng-template #sinSeleccion>
+      @if (jugadorSeleccionado) {
+        <div class="d-grid gap-3">
+          <app-detail [player]="jugadorSeleccionado" (closeDetail)="onCloseDetail()"></app-detail>
+          <app-media [videoUrl]="jugadorSeleccionado.videoUrl"></app-media>
+        </div>
+      } @else {
         <div class="eb-tarjeta eb-vacio text-center text-suave p-5">
           <span class="eb-vacio__icono" aria-hidden="true">🏀</span>
           Selecciona un jugador del listado para ver su ficha y su vídeo.
         </div>
-      </ng-template>
+      }
     </div>
   </div>
 </main>

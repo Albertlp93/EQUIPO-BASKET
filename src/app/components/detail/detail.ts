@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Player } from '../../shared/models/player.model';
 import { AvatarComponent } from '../../shared/components/avatar/avatar';
 
@@ -13,7 +12,7 @@ interface DatoFicha {
 @Component({
   selector: 'app-detail',
   standalone: true,
-  imports: [CommonModule, AvatarComponent],
+  imports: [AvatarComponent],
   templateUrl: './detail.html',
   styleUrl: './detail.css',
 })

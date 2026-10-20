@@ -1,19 +1,25 @@
 <!-- Filtros: texto + desplegable (parámetros del pipe playerFilter) -->
 <div class="row g-2 mb-3">
-  <div class="col-sm-7">
-    <input
-      type="search"
-      class="form-control"
-      placeholder="Buscar por nombre..."
-      aria-label="Buscar jugador por nombre"
-      [(ngModel)]="texto"
-    />
+  <div class="col-sm-6">
+    <div class="eb-campo-icono">
+      <svg class="eb-icono" aria-hidden="true"><use href="assets/icons/icons.svg#search"></use></svg>
+      <input
+        type="search"
+        class="form-control"
+        placeholder="Buscar por nombre..."
+        aria-label="Buscar jugador por nombre"
+        [(ngModel)]="texto"
+      />
+    </div>
   </div>
-  <div class="col-sm-5">
-    <select class="form-select" aria-label="Filtrar por posición" [(ngModel)]="posicion">
-      <option value="">Todas las posiciones</option>
-      <option *ngFor="let pos of posiciones" [value]="pos">{{ pos }}</option>
-    </select>
+  <div class="col-sm-6">
+    <div class="eb-campo-icono">
+      <svg class="eb-icono" aria-hidden="true"><use href="assets/icons/icons.svg#funnel"></use></svg>
+      <select class="form-select" aria-label="Filtrar por posición" [(ngModel)]="posicion">
+        <option value="">Todas las posiciones</option>
+        <option *ngFor="let pos of posiciones" [value]="pos">{{ pos }}</option>
+      </select>
+    </div>
   </div>
 </div>
 

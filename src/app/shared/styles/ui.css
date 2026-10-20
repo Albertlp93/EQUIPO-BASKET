@@ -55,6 +55,36 @@
   color: var(--eb-texto);
 }
 
+/* Botón de cerrar / eliminar: siempre rojo */
+.eb-btn--peligro {
+  background: var(--eb-rojo);
+  color: #fff;
+}
+
+.eb-btn--peligro:hover:not(:disabled) {
+  background: var(--eb-rojo-oscuro);
+}
+
+/* Botón de información: azul eléctrico */
+.eb-btn--info {
+  background: var(--eb-azul-electrico);
+  color: #fff;
+  text-decoration: none;
+}
+
+.eb-btn--info:hover {
+  background: var(--eb-azul-electrico-oscuro);
+  color: #fff;
+}
+
+/* Botón cuadrado solo con icono */
+.eb-btn--icono {
+  justify-content: center;
+  width: 2.1rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Campos de formulario (Bootstrap en modo oscuro) */
 .form-control,
 .form-select {
@@ -79,6 +109,29 @@
 .form-select option {
   background: var(--eb-fondo-tarjeta);
   color: var(--eb-texto);
+}
+
+/* Campo con icono a la izquierda (buscador) */
+.eb-campo-icono {
+  position: relative;
+}
+
+.eb-campo-icono > .eb-icono {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: var(--eb-texto-suave);
+  pointer-events: none;
+}
+
+.eb-campo-icono > .form-control,
+.eb-campo-icono > .form-select {
+  padding-left: 2.25rem;
+}
+
+.eb-campo-icono:focus-within > .eb-icono {
+  color: var(--eb-naranja);
 }
 
 /* Barras deslizantes (progreso y volumen) */
@@ -111,4 +164,12 @@
 .eb-rango:disabled {
   opacity: 0.5;
   cursor: default;
+}
+
+/* Iconos del sprite shared/icons/icons.svg (toman el color del texto) */
+.eb-icono {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  color: inherit;
 }

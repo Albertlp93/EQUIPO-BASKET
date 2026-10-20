@@ -1,5 +1,4 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { NgIf } from '@angular/common';
 
 /**
  * Foto circular de una persona.
@@ -8,7 +7,6 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-avatar',
   standalone: true,
-  imports: [NgIf],
   templateUrl: './avatar.html',
   styleUrl: './avatar.css',
 })

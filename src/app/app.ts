@@ -1,5 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { HeaderComponent } from './shared/components/header/header';
 import { FooterComponent } from './shared/components/footer/footer';
@@ -13,14 +12,7 @@ import { TEAM_NAME, TEAM_SUBTITLE } from './data/team.config';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
-    CommonModule,
-    HeaderComponent,
-    FooterComponent,
-    PlayersComponent,
-    DetailComponent,
-    MediaComponent,
-  ],
+  imports: [HeaderComponent, FooterComponent, PlayersComponent, DetailComponent, MediaComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

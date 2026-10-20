@@ -1,19 +1,12 @@
-import {
-  Component,
-  ElementRef,
-  Input,
-  OnChanges,
-  SimpleChanges,
-  ViewChild,
-} from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
+import { NgClass } from '@angular/common';
 import { DurationPipe } from '../../shared/pipes/duration.pipe';
 
 /** Reproductor de vídeo con controles propios (play, pause, stop, progreso y volumen). */
 @Component({
   selector: 'app-media',
   standalone: true,
-  imports: [CommonModule, DurationPipe],
+  imports: [NgClass, DurationPipe],
   templateUrl: './media.html',
   styleUrl: './media.css',
 })

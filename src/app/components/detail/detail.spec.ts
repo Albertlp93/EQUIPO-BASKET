@@ -26,7 +26,13 @@ describe('DetailComponent', () => {
   it('emite closeDetail al pulsar cerrar', () => {
     let cerrado = false;
     component.closeDetail.subscribe(() => (cerrado = true));
-    (fixture.nativeElement as HTMLElement).querySelector<HTMLButtonElement>('.eb-btn--borde')?.click();
+    (fixture.nativeElement as HTMLElement).querySelector<HTMLButtonElement>('.eb-btn--peligro')?.click();
     expect(cerrado).toBe(true);
+  });
+
+  it('el botón info enlaza con infoUrl en otra pestaña', () => {
+    const enlace = (fixture.nativeElement as HTMLElement).querySelector<HTMLAnchorElement>('.eb-btn--info');
+    expect(enlace?.getAttribute('href')).toBe(PLAYERS_DATA[0].infoUrl);
+    expect(enlace?.getAttribute('target')).toBe('_blank');
   });
 });

@@ -15,5 +15,6 @@ export interface Player {
   puntosPorPartido: number;
   fotoUrl: string;
   videoUrl: string;
+  infoUrl: string;
   biografia: string;
 }
